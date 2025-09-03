@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sv">
+<head> <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FJ825QKRJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8FJ825QKRJ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth • Creative</title>
+<style>
+  :root{
+    --bg:#000;
+    --fg:#a3a3a3;          /* mörkgrå text */
+    --soft:#d9d9d9;        /* ljusare grå för viktiga ord */
+    --line:#2a2a2a;        /* diskret linje */
+    --accent:#ff3b3b;      /* röd glöd */
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    color:var(--fg);
+    background:var(--bg);
+    font:500 15px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    letter-spacing:.02em;
+    overflow:hidden;
+  }
+
+  /* Abstrakt bakgrund (inspirerad av referensbilden) */
+  .bg{
+    position:fixed; inset:0; z-index:-1;
+    background:
+      radial-gradient(1200px 700px at 65% 35%, rgba(255,60,60,.28), transparent 60%),
+      radial-gradient(900px 700px at 35% 65%, rgba(220,20,20,.22), transparent 60%),
+      radial-gradient(700px 500px at 80% 60%, rgba(255,80,40,.18), transparent 65%),
+      linear-gradient(180deg, #050505 0%, #000 100%);
+    filter:saturate(105%) blur(0.5px);
+  }
+  /* mjuk rörelse för levande känsla */
+  @keyframes drift{
+    0%{transform:translate3d(0,0,0) scale(1)}
+    50%{transform:translate3d(-1.2%, .8%,0) scale(1.02)}
+    100%{transform:translate3d(0,0,0) scale(1)}
+  }
+  .bg{animation:drift 18s ease-in-out infinite}
+
+  /* diskreta “guides” som i skissen */
+  .guide{
+    position:fixed; top:0; bottom:0; width:0; border-right:1px dashed var(--line); opacity:.7; pointer-events:none
+  }
+  .guide.left{left:14%}
+  .guide.right{right:14%}
+
+  /* Layout för orden */
+  .word{
+    position:fixed; top:50%; transform:translateY(-50%);
+    letter-spacing:.18em; text-transform:uppercase; font-weight:800;
+    color:var(--soft);
+    text-shadow:0 1px 0 rgba(255,255,255,.05), 0 18px 80px rgba(0,0,0,.6);
+    white-space:nowrap;
+  }
+  .word.left{left:8vw}
+  .word.right{right:8vw; text-align:right}
+  .word.center{
+    left:50%; transform:translate(-50%,-50%);
+    letter-spacing:.12em; font-weight:700; color:#c9c9c9;
+  }
+  .word.small{
+    font-weight:700; letter-spacing:.14em; font-size:clamp(10px,1.4vw,12px); color:#bdbdbd
+  }
+
+  .word.left, .word.right{font-size:clamp(20px,4.2vw,40px)}
+  .word.center{font-size:clamp(14px,2.2vw,20px)}
+
+  .label{
+    position:fixed; right:9vw; bottom:8vh; color:#bfbfbf; letter-spacing:.16em; text-transform:uppercase;
+    font-size:clamp(10px,1.5vw,12px); font-weight:700
+  }
+
+  /* Notes-ruta */
+  .notes{
+    position:fixed; left:50%; bottom:32px; transform:translateX(-50%);
+    width:min(680px,92vw);
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 30px 120px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.02);
+  }
+  .bar{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.06); color:#cfcfcf; font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:12px
+  }
+  textarea{
+    width:100%; height:140px; resize:vertical; min-height:110px; max-height:48vh;
+    background:transparent; color:#e6e6e6; border:0; outline:none;
+    padding:14px 14px 16px; font:500 14px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  .hint{font-size:12px; color:#9a9a9a}
+  .dot{
+    width:9px;height:9px;border-radius:999px;background:radial-gradient(circle at 30% 30%, #fff, #bbb);
+    box-shadow:0 0 0 3px rgba(255,255,255,.06), 0 8px 24px rgba(0,0,0,.5)
+  }
+  .save{
+    display:flex; align-items:center; gap:8px; font-size:12px; color:#bfbfbf
+  }
+  .save .status{opacity:.75}
+
+  @media (max-width:680px){
+    .label{right:7vw}
+    .word.left{left:6vw}
+    .word.right{right:6vw}
+  }
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="guide left" aria-hidden="true"></div>
+  <div class="guide right" aria-hidden="true"></div>
+
+  <div class="word left">Growth</div>
+  <div class="word center">Stockholm</div>
+  <div class="word right">Creative</div>
+  <div class="label">Created by love</div>
+
+  <section class="notes" aria-label="Anteckningar">
+    <div class="bar">
+      <span style="display:flex;align-items:center;gap:10px">
+        <span class="dot" aria-hidden="true"></span> Notes
+      </span>
+      <span class="save"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6m16 0V7a2 2 0 0 0-2-2h-2l-2-2H10L8 5H6a2 2 0 0 0-2 2v5m16 0H4" stroke="currentColor" stroke-width="2"/></svg><span class="status">Sparas…</span></span>
+    </div>
+    <textarea id="notes" placeholder="Skriv dina anteckningar här… (autospar i din webbläsare)"></textarea>
+  </section>
+
+<script>
+  const el = document.getElementById('notes');
+  const key = 'unlocking982_notes';
+  const status = document.querySelector('.status');
+
+  try{ el.value = localStorage.getItem(key) || '' }catch(e){}
+  let t;
+  const setStatus = (txt)=>{ status.textContent = txt }
+
+  el.addEventListener('input', ()=> {
+    setStatus('Sparar…');
+    clearTimeout(t);
+    t = setTimeout(()=> {
+      try{ localStorage.setItem(key, el.value) }catch(e){}
+      setStatus('Sparat');
+      setTimeout(()=> setStatus(''), 1200);
+    }, 280);
+  });
+
+  // Fokusera textarea på ”N” (snabb anteckning)
+  window.addEventListener('keydown', (e)=>{
+    if (e.key.toLowerCase() === 'n' && !e.metaKey && !e.ctrlKey && !e.altKey){
+      e.preventDefault(); el.focus();
+    }
+  });
+</script>
+</body>
+</html>
+
