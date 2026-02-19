@@ -15,7 +15,7 @@ export default function LeadMagnetModal() {
 
   // Soscale-ish timing defaults (feels intentional, not jumpy)
   const delayMs = cfg?.delayMs ?? 1800;
-  const oncePerDays = cfg?.oncePerDays ?? 7;
+  const oncePerDays = cfg?.oncePerDays ?? 0.01;
 
   const shouldShow = useMemo(() => {
     if (!cfg?.enabled) return false;
