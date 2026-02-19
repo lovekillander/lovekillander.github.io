@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stadium CRM – Join the Movement (Overview)</title>
+  <style>
+    :root{
+      --bg:#000000;
+      --card:#111111;
+      --border:#222222;
+      --orange:#FF5A00;
+      --white:#FFFFFF;
+      --muted:#BDBDBD;
+      --black:#000000;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--white);
+      line-height:1.45;
+    }
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 80px;}
+    .top{
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      padding:18px 18px 14px;
+      margin-bottom:18px;
+      position:sticky;
+      top:0;
+      z-index:5;
+      backdrop-filter: blur(6px);
+    }
+    .logo{
+      font-weight:800;
+      letter-spacing:0.5px;
+      font-size:28px;
+      text-transform:lowercase;
+    }
+    .divider{height:1px;background:var(--orange);opacity:.9;margin:10px 0 12px;}
+    .title{font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chip{
+      border:1px solid var(--orange);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:12px;
+      color:var(--white);
+      background:rgba(255,90,0,.06);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.35fr .9fr;
+      gap:14px;
+      align-items:start;
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      .panel{position:relative;top:auto}
+    }
+
+    .flow{
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .section-label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--orange);
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    .node{
+      border:1px solid var(--border);
+      background:#0c0c0c;
+      border-radius:16px;
+      padding:14px 14px 12px;
+      margin:12px 0;
+      position:relative;
+    }
+
+    .node:before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:1px;
+      background:var(--orange);
+      opacity:.9;
+    }
+
+    .node-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+      margin-top:6px;
+    }
+    .node-title{
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      font-size:13px;
+      color:var(--orange);
+    }
+    .badge{
+      border:1px solid var(--orange);
+      color:var(--orange);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .meta{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .bullets{
+      margin:10px 0 0 0;
+      padding-left:16px;
+      color:var(--white);
+      font-size:13px;
+    }
+    .bullets li{margin:6px 0}
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .btn{
+      border-radius:999px;
+      padding:10px 12px;
+      font-weight:700;
+      font-size:12px;
+      cursor:pointer;
+      border:1px solid var(--border);
+      background:transparent;
+      color:var(--white);
+    }
+    .btn.primary{
+      background:var(--orange);
+      color:var(--black);
+      border-color:var(--orange);
+    }
+    .btn.outline{
+      border-color:var(--orange);
+      color:var(--white);
+      background:transparent;
+    }
+    .wait{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--muted);
+      font-size:12px;
+      padding:8px 10px;
+      border:1px dashed #2a2a2a;
+      border-radius:12px;
+      margin:10px 0;
+      background:#0a0a0a;
+    }
+    .wait .dot{
+      width:8px;height:8px;border-radius:999px;background:var(--orange);opacity:.85;
+    }
+
+    .decision{
+      border:1px solid var(--border);
+      background:#0a0a0a;
+      border-radius:16px;
+      padding:12px;
+      margin:12px 0;
+    }
+    .decision-title{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:var(--white);
+    }
+    .decision-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width:640px){
+      .decision-row{grid-template-columns:1fr}
+    }
+    .branch{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px;
+      background:#0c0c0c;
+    }
+    .branch-label{
+      font-size:12px;
+      font-weight:800;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+    .branch-label span{
+      color:var(--orange);
+      margin-right:6px;
+    }
+
+    .panel{
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      padding:16px;
+      position:sticky;
+      top:104px;
+    }
+    .panel h3{
+      margin:0;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--orange);
+      font-size:13px;
+    }
+    .email{
+      margin-top:12px;
+      border:1px solid var(--border);
+      background:#0c0c0c;
+      border-radius:16px;
+      padding:14px;
+      position:relative;
+    }
+    .email:before{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;
+      height:1px;background:var(--orange);opacity:.9;
+    }
+    .email .subject{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:6px;
+    }
+    .email .headline{
+      margin-top:10px;
+      font-weight:900;
+      font-size:18px;
+      color:var(--white);
+    }
+    .email .body{
+      margin-top:8px;
+      color:var(--white);
+      font-size:13px;
+      white-space:pre-line;
+    }
+    .email .cta{
+      margin-top:12px;
+      display:inline-flex;
+      padding:11px 14px;
+      border-radius:999px;
+      background:var(--orange);
+      color:var(--black);
+      font-weight:800;
+      font-size:12px;
+      border:1px solid var(--orange);
+    }
+    .email .link{
+      display:block;
+      margin-top:10px;
+      color:var(--orange);
+      font-weight:700;
+      font-size:12px;
+      text-decoration:none;
+    }
+    .impact{
+      margin-top:14px;
+      border:1px solid var(--border);
+      background:#0c0c0c;
+      border-radius:16px;
+      padding:14px;
+      position:relative;
+    }
+    .impact:before{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;height:1px;background:var(--orange);opacity:.9;
+    }
+    .impact h4{
+      margin:6px 0 10px 0;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      color:var(--orange);
+      font-size:12px;
+    }
+    .impact ul{margin:0;padding-left:16px}
+    .impact li{margin:7px 0;color:var(--white);font-size:13px}
+    .hint{color:var(--muted);font-size:12px;margin-top:10px}
+    .tiny{font-size:11px;color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo">stadium</div>
+      <div class="divider"></div>
+      <div class="title">Join the Movement – CRM automation overview</div>
+      <div class="subtitle">Från köp till relation: mål- och beteendedriven löparresa (Voyado + Strava)</div>
+      <div class="chips">
+        <div class="chip" id="chipClv">CLV: Medel</div>
+        <div class="chip" id="chipChurn">Churn-risk: Låg</div>
+        <div class="chip" id="chipNba">Next Best Action: Momentum</div>
+      </div>
+      <div class="tiny">Klicka på valfri ruta för att se ett exempelutskick till höger.</div>
+    </div>
+
+    <div class="grid">
+      <div class="flow" id="flow">
+
+        <div class="section-label">Systemflöde 0–7</div>
+
+        <!-- STEP 0 -->
+        <div class="node" data-email="step0">
+          <div class="node-head">
+            <div class="node-title">Steg 0 — Smart rekrytering – rätt löpare in</div>
+            <div class="badge">Paid Social</div>
+          </div>
+          <div class="meta">Trigger: Lookalike-målgrupp | Data: löparmålgrupp + Voyado-signal</div>
+          <ul class="bullets">
+            <li>Lookalike baserad på befintlig löparmålgrupp</li>
+            <li>Köphistorik + beteendedata i Voyado</li>
+            <li>Klick → landar på Stadium</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step0">Öppna exempel</button>
+          </div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="node" data-email="step1">
+          <div class="node-head">
+            <div class="node-title">Steg 1 — Datainträde utan friktion</div>
+            <div class="badge">Email</div>
+          </div>
+          <div class="meta">Trigger: Signup | Kanal: Email (fallback RCS/SMS)</div>
+          <ul class="bullets">
+            <li>Signup med 10 % välkomstrabatt → förstapartsdata skapas i Voyado</li>
+            <li>Välkomstmail: Rabatt + “Komplettera din löparprofil” (quiz + Strava)</li>
+            <li>Segmentering + CLV-prediktion startar</li>
+          </ul>
+
+          <div class="wait"><span class="dot"></span> Vänta 3 dagar</div>
+
+          <div class="decision">
+            <div class="decision-title">Öppnat mail?</div>
+            <div class="decision-row">
+              <div class="branch">
+                <div class="branch-label"><span>YES</span> Fortsätt</div>
+                <div class="tiny">Gå vidare mot köp-trigger (Steg 2) och databerikning (Steg 3).</div>
+              </div>
+              <div class="branch">
+                <div class="branch-label"><span>NO</span> Fallback</div>
+                <div class="tiny">Skicka RCS/SMS: “Sätt ditt mål på 20 sek”.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" data-email="step1">Öppna exempel</button>
+            <button class="btn outline" data-email="step1b">Visa fallback</button>
+          </div>
+        </div>
+
+        <!-- STEP 1B -->
+        <div class="node" data-email="step1b">
+          <div class="node-head">
+            <div class="node-title">Steg 1B — Ej öppnat efter 3 dagar</div>
+            <div class="badge">RCS/SMS</div>
+          </div>
+          <div class="meta">Trigger: No-open | Kanal: RCS/SMS</div>
+          <ul class="bullets">
+            <li>Kort, visuellt: “Komplettera din löparprofil”</li>
+            <li>CTA: “Sätt ditt mål på 20 sek”</li>
+            <li>Vid klick → tillbaka till quiz + Strava opt-in (Steg 3)</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step1b">Öppna exempel</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="node" data-email="step2">
+          <div class="node-head">
+            <div class="node-title">Steg 2 — Trigger: köp → målstart</div>
+            <div class="badge">Post-purchase Email</div>
+          </div>
+          <div class="meta">Trigger: Köp av löparskor/träningsprodukt | Data: Transaktion → realtid in i Voyado</div>
+          <ul class="bullets">
+            <li>Automatiskt mail: “Vilket lopp tränar du mot?” (om quiz ej gjort)</li>
+            <li>CTA: Sätt mål</li>
+            <li>CTA: Koppla Strava</li>
+            <li>CTA: Gå med i lokal movement</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step2">Öppna exempel</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="node" data-email="step3">
+          <div class="node-head">
+            <div class="node-title">Steg 3 — Databerikning & intelligent segmentering</div>
+            <div class="badge">Voyado</div>
+          </div>
+          <div class="meta">Data: Strava + quiz + köphistorik | Output: segment + CLV/churn/next buy</div>
+          <ul class="bullets">
+            <li>Träningsfrekvens, belastningskurva, loppdatum</li>
+            <li>Skons livslängd (km/slitage)</li>
+            <li>Segment: “Goal-Driven Runner – High Engagement”</li>
+            <li>Beräknar: sannolik CLV, churn-risk, nästa köp-tidpunkt</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step3">Öppna exempel</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="node" data-email="step4">
+          <div class="node-head">
+            <div class="node-title">Steg 4 — Personlig träningsresa (helt automatiserad)</div>
+            <div class="badge">Email / Onsite / Wallet</div>
+          </div>
+          <div class="meta">Vecka 1–4: Momentum | Trigger (Strava): ökad belastning → RCS/SMS</div>
+          <ul class="bullets">
+            <li>Email: träningspepp + smarta utrustningstips kopplat till köpta skor</li>
+            <li>Onsite-personalisering: löparsortiment prioriteras</li>
+            <li>Wallet-kort aktiveras → Stadium alltid i fickan</li>
+            <li>Vid ökad belastning: RCS/SMS “Du ökar snabbt nu – glöm inte återhämtningen.”</li>
+            <li>Rek: recovery-produkter, energi, skadeförebyggande utrustning</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step4">Öppna exempel</button>
+            <button class="btn outline" data-email="step4sms">Visa Strava-trigger</button>
+          </div>
+          <div class="hint">Känns som coachning, inte försäljning.</div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="node" data-email="step5">
+          <div class="node-head">
+            <div class="node-title">Steg 5 — 4 veckor före lopp (peak-fas)</div>
+            <div class="badge">Email-serie</div>
+          </div>
+          <div class="meta">Trigger: 4 veckor kvar till lopp | Output: race-serie + community</div>
+          <ul class="bullets">
+            <li>Automatiserad race-serie: checklista, energi & tävlingskläder</li>
+            <li>Inbjudan: lokalt run club, butiksevent, shake-out run</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step5">Öppna exempel</button>
+          </div>
+          <div class="hint">Driver både försäljning + community + butikstrafik.</div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="node" data-email="step6">
+          <div class="node-head">
+            <div class="node-title">Steg 6 — Race-ögonblicket (emotionell topp)</div>
+            <div class="badge">Wallet push</div>
+          </div>
+          <div class="meta">Trigger: tävlingsdagen | Data: geobaserad wallet-trigger (mock)</div>
+          <ul class="bullets">
+            <li>“Lycka till idag. Hämta gratis sportdryck i din Stadium-butik efter målgång.”</li>
+            <li>Stadium är med i ögonblicket, inte bara köpet.</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step6">Öppna exempel</button>
+          </div>
+        </div>
+
+        <!-- STEP 7 -->
+        <div class="node" data-email="step7">
+          <div class="node-head">
+            <div class="node-title">Steg 7 — Efter loppet → CLV-förlängning</div>
+            <div class="badge">Email + Community</div>
+          </div>
+          <div class="meta">Trigger: registrerat lopp | Output: nytt mål + uppföljning + skopåminnelse</div>
+          <ul class="bullets">
+            <li>Mail: “Grattis! Vad är nästa mål?”</li>
+            <li>Nytt träningsspår startas</li>
+            <li>Skopåminnelse baserat på faktisk kilometer-slitage</li>
+            <li>Inbjudan: ny challenge, community, längre program</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" data-email="step7">Öppna exempel</button>
+          </div>
+        </div>
+
+        <div class="impact">
+          <h4>Affärseffekt</h4>
+          <ul>
+            <li>Fler köp längs hela träningscykeln</li>
+            <li>Djup emotionell relation</li>
+            <li>CLV-lyft 3 → 4</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="panel">
+        <h3>Email preview</h3>
+        <div class="email" id="emailPreview">
+          <div class="subject" id="pSubject">Ämne: Välj ett steg</div>
+          <div class="headline" id="pHeadline">Klicka på en ruta</div>
+          <div class="body" id="pBody">Så visas ett exempelutskick här i samma Stadium-stil (svart/orange).</div>
+          <div class="cta" id="pCTA">CTA</div>
+          <a class="link" id="pLink" href="#" onclick="return false;">Sekundär länk</a>
+        </div>
+        <div class="hint">Detta är en mockup. Inga riktiga integrationer.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const emails = {
+      step0: {
+        clv: "Medel",
+        churn: "Låg",
+        nba: "Signup",
+        subject: "Ämne: Join the Movement börjar här",
+        headline: "Välkommen in",
+        body: "Du är på väg in i Join the Movement.\nNästa steg är att skapa din löparprofil så vi kan guida dig med rätt stöd i rätt tid.",
+        cta: "Gå till signup",
+        link: "Se hur det funkar",
+      },
+      step1: {
+        clv: "Medel",
+        churn: "Låg",
+        nba: "Komplettera profil",
+        subject: "Ämne: Välkommen till Join the Movement",
+        headline: "Välkommen, Stadium Member",
+        body: "Kära medlem,\nTack för att du väljer Stadium som din partner i din löparresa.\n\nBörja med att svara på några snabba frågor så anpassar vi din upplevelse efter din nivå.",
+        cta: "Starta din check-in",
+        link: "Koppla Strava för mer personliga tips",
+      },
+      step1b: {
+        clv: "Medel",
+        churn: "Medel",
+        nba: "Sätt mål",
+        subject: "Ämne: Sätt ditt mål på 20 sek",
+        headline: "Komplettera din löparprofil",
+        body: "Vi gör det enkelt.\nVälj ditt mål på 20 sekunder så får du tips och rekommendationer som matchar din resa.",
+        cta: "Sätt mål",
+        link: "Kanske senare",
+      },
+      step2: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Sätt mål",
+        subject: "Ämne: Vilket lopp tränar du mot?",
+        headline: "Sätt ditt mål",
+        body: "Vi vill guida dig hela vägen.\nVälj vilket mål du tränar mot så får du rätt stöd, rätt timing och relevanta rekommendationer.",
+        cta: "Välj mål",
+        link: "Koppla Strava",
+      },
+      step3: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Momentum",
+        subject: "Ämne: Din löparprofil är klar",
+        headline: "Din plan är igång",
+        body: "Din profil är uppdaterad.\nNu kan vi anpassa tips, pepp och rekommendationer efter din nivå och dina behov över tid.",
+        cta: "Se din status",
+        link: "Uppdatera mål",
+      },
+      step4: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Recovery",
+        subject: "Ämne: Du bygger momentum",
+        headline: "Veckans nästa steg",
+        body: "Du är igång.\nHär är 3 enkla steg som gör det lättare att fortsätta — plus smart recovery för att minska skaderisk.",
+        cta: "Se veckans tips",
+        link: "Koppla Strava",
+      },
+      step4sms: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Recovery",
+        subject: "Ämne: Du ökar snabbt nu",
+        headline: "Kom ihåg återhämtning",
+        body: "Vi ser att belastningen ökar.\nGlöm inte återhämtningen för att fortsätta stabilt.\n\nRek: recovery, energi, skadeprevention.",
+        cta: "Se recovery-tips",
+        link: "Spara i Wallet",
+      },
+      step5: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Race prep",
+        subject: "Ämne: 4 veckor kvar till loppet",
+        headline: "Race-serie: din checklista",
+        body: "Nu är det nära.\nHär är din checklista, energi & tävlingskläder — plus inbjudan till run club och shake-out run.",
+        cta: "Öppna checklistan",
+        link: "Se lokala event",
+      },
+      step6: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Moment",
+        subject: "Ämne: Lycka till idag",
+        headline: "Det här fixar du",
+        body: "Vi hejar på dig.\nEfter målgång: hämta gratis sportdryck i din Stadium-butik.",
+        cta: "Visa wallet-kort",
+        link: "Hitta butik",
+      },
+      step7: {
+        clv: "Hög",
+        churn: "Låg",
+        nba: "Next goal",
+        subject: "Ämne: Grattis – vad är nästa mål?",
+        headline: "Nästa steg",
+        body: "Starkt jobbat.\nVälj nästa mål så anpassar vi din plan och ser till att du får rätt stöd i rätt tid.\n\nVi påminner också när det är dags att se över skorna baserat på faktisk användning.",
+        cta: "Sätt nästa mål",
+        link: "Gå med i en ny challenge",
+      }
+    };
+
+    function setChips(clv, churn, nba){
+      document.getElementById("chipClv").textContent = "CLV: " + clv;
+      document.getElementById("chipChurn").textContent = "Churn-risk: " + churn;
+      document.getElementById("chipNba").textContent = "Next Best Action: " + nba;
+    }
+
+    function setPreview(key){
+      const e = emails[key];
+      if(!e) return;
+      document.getElementById("pSubject").textContent = e.subject;
+      document.getElementById("pHeadline").textContent = e.headline;
+      document.getElementById("pBody").textContent = e.body;
+      document.getElementById("pCTA").textContent = e.cta;
+      const link = document.getElementById("pLink");
+      link.textContent = e.link;
+      setChips(e.clv, e.churn, e.nba);
+    }
+
+    document.getElementById("flow").addEventListener("click", (ev) => {
+      const btn = ev.target.closest("[data-email]");
+      if(!btn) return;
+      setPreview(btn.getAttribute("data-email"));
+    });
+  </script>
+</body>
+</html>
