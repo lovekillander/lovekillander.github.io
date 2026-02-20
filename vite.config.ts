@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-base: mode === "production" ? "/love-s-premium-portfolio/" : "/",
+base: "/",
 
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
