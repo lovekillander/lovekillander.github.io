@@ -4,8 +4,8 @@ export const siteData = {
   eyebrow: "PERFORMANCE / CREATIVE / COMMERCE",
   microCopy: "Created by Love, International Brand Building",
   headline: "Performance. Creative. Commerce.",
-  subheadline:
-    "I'm Love Killander, a Growth Marketer and Creative Strategist. I'm studying Growth Marketing at Berghs and have done an internship at Redgert Comms. I combine performance, testing, and creative direction to build scalable systems.",
+subheadline:
+  "I build brands that move and systems that scale.\nPerformance gives the signal. Creative gives the meaning. Commerce proves it.\nInternational by default. Built across Europe and the US.",
   ctaPrimary: "View work",
   ctaSecondary: "Get in touch",
 
