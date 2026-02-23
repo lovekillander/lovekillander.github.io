@@ -64,7 +64,7 @@ const ContactSection = () => {
             <a
               href={`mailto:${siteData.contact.email}`}
               className="hover:text-foreground transition-colors"
-              onClick={() => trackEvent("contact_click", { method: "email" })}
+              onClick={() => trackEvent("contact_email_click")}
             >
               Email
             </a>
@@ -73,7 +73,7 @@ const ContactSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
-              onClick={() => trackEvent("contact_click", { method: "linkedin" })}
+              onClick={() => trackEvent("contact_linkedin_click")}
             >
               LinkedIn
             </a>
