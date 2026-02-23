@@ -42,13 +42,13 @@ export default function LeadMagnetModal() {
   }, [shouldShow, delayMs]);
 
   const close = (method: "button" | "backdrop") => {
-    trackEvent(method === "button" ? "click_close_popup" : "click_close_backdrop");
+    trackEvent(method === "button" ? "close" : "close_backdrop");
     setOpen(false);
   };
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackEvent("click_get_it");
+    trackEvent("get_it");
     // TODO later: connect Mailchimp/ConvertKit/etc
     setOpen(false);
   };

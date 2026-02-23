@@ -18,7 +18,7 @@ const HeroSection = () => {
   <a
     href="#services"
     className="inline-flex items-center px-6 py-3 text-sm font-medium bg-foreground text-background rounded-full hover:opacity-90 transition"
-    onClick={() => trackEvent("click_view_work")}
+    onClick={() => trackEvent("view_work")}
   >
     {siteData.ctaPrimary}
   </a>
@@ -26,7 +26,7 @@ const HeroSection = () => {
   <a
     href="#contact"
     className="inline-flex items-center px-6 py-3 text-sm font-medium text-foreground border border-border rounded-full hover:bg-foreground hover:text-background transition"
-    onClick={() => trackEvent("click_get_in_touch")}
+    onClick={() => trackEvent("get_in_touch")}
   >
     {siteData.ctaSecondary}
   </a>

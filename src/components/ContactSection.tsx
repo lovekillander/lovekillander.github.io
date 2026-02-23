@@ -21,7 +21,7 @@ const ContactSection = () => {
             className="space-y-4 mb-8"
             onSubmit={(e) => {
               e.preventDefault();
-              trackEvent("click_send_message");
+              trackEvent("send_message");
               window.location.href = `mailto:${siteData.contact.email}?subject=Hello from ${form.name}&body=${form.message}`;
             }}
           >
@@ -64,7 +64,7 @@ const ContactSection = () => {
             <a
               href={`mailto:${siteData.contact.email}`}
               className="hover:text-foreground transition-colors"
-              onClick={() => trackEvent("click_email")}
+              onClick={() => trackEvent("email")}
             >
               Email
             </a>
@@ -73,7 +73,7 @@ const ContactSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
-              onClick={() => trackEvent("click_linkedin")}
+              onClick={() => trackEvent("linkedin")}
             >
               LinkedIn
             </a>
