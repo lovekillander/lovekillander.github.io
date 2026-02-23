@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { siteData } from "@/data/siteData";
+import { trackEvent } from "@/lib/analytics";
 
 const STORAGE_KEY = "leadmagnet_last_shown_ts";
 
@@ -40,12 +41,16 @@ export default function LeadMagnetModal() {
     return () => window.clearTimeout(t);
   }, [shouldShow, delayMs]);
 
-  const close = () => setOpen(false);
+  const close = (method: "button" | "backdrop") => {
+    trackEvent("lead_magnet_close", { method });
+    setOpen(false);
+  };
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackEvent("lead_magnet_submit");
     // TODO later: connect Mailchimp/ConvertKit/etc
-    close();
+    setOpen(false);
   };
 
   if (!cfg?.enabled) return null;
@@ -67,7 +72,7 @@ export default function LeadMagnetModal() {
         ].join(" ")}
         aria-hidden={!open}
       >
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-md" onClick={close} />
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-md" onClick={() => close("backdrop")} />
       </div>
 
       {/* Modal wrapper */}
@@ -94,7 +99,7 @@ export default function LeadMagnetModal() {
 
           {/* Close button */}
           <button
-            onClick={close}
+            onClick={() => close("button")}
             className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/80 hover:bg-white/10"
           >
             Close

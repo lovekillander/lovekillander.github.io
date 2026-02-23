@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { siteData } from "@/data/siteData";
 import { useReveal } from "@/hooks/useReveal";
+import { trackEvent } from "@/lib/analytics";
 
 const ContactSection = () => {
   const ref = useReveal<HTMLDivElement>();
@@ -20,6 +21,7 @@ const ContactSection = () => {
             className="space-y-4 mb-8"
             onSubmit={(e) => {
               e.preventDefault();
+              trackEvent("contact_form_submit");
               window.location.href = `mailto:${siteData.contact.email}?subject=Hello from ${form.name}&body=${form.message}`;
             }}
           >
@@ -62,6 +64,7 @@ const ContactSection = () => {
             <a
               href={`mailto:${siteData.contact.email}`}
               className="hover:text-foreground transition-colors"
+              onClick={() => trackEvent("contact_click", { method: "email" })}
             >
               Email
             </a>
@@ -70,6 +73,7 @@ const ContactSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
+              onClick={() => trackEvent("contact_click", { method: "linkedin" })}
             >
               LinkedIn
             </a>

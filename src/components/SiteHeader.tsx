@@ -1,4 +1,5 @@
 import { siteData } from "@/data/siteData";
+import { trackEvent } from "@/lib/analytics";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -19,6 +20,7 @@ const SiteHeader = () => {
               key={item.href}
               href={item.href}
               className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full hover:bg-secondary"
+              onClick={() => trackEvent("nav_click", { label: item.label.toLowerCase() })}
             >
               {item.label}
             </a>
