@@ -131,7 +131,7 @@ const CaseStudies = () => {
                       <p>Preserve brand equity.</p>
                     </div>
                   </div>
-                  <CaseImage src="/images/uys-cart.jpg" alt="Under Your Skin — cart redesign" />
+                  <CaseImage src="/images/uys-cart.jpg" alt="Under Your Skin — cart redesign" aspect="aspect-[16/9]" />
                 </div>
               </div>
             </div>
@@ -164,7 +164,6 @@ const CaseStudies = () => {
                       It strengthens brand relationship without discount dependency.
                     </p>
                   </div>
-                  <CaseImage src="/images/uys-value.jpg" alt="Under Your Skin — value reinforcement" />
                 </div>
               </div>
             </div>
@@ -200,7 +199,9 @@ const CaseStudies = () => {
                       This is applied web psychology, not decoration.
                     </p>
                   </div>
-                  <CaseImage src="/images/uys-payment.jpg" alt="Under Your Skin — payment architecture" />
+                  <div className="max-w-xs">
+                    <CaseImage src="/images/uys-payment.jpg" alt="Under Your Skin — payment architecture" aspect="aspect-[616/1058]" />
+                  </div>
                 </div>
               </div>
             </div>
