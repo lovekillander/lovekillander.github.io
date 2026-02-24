@@ -97,7 +97,7 @@ subheadline:
   },
   // Formspree form ID (the part after /f/ in your endpoint URL)
   // Get it at formspree.io → create a free form → copy the ID
-  formspree: "",
+  formspree: "xrearekb",
 
   leadMagnet: {
   enabled: true,
