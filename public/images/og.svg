@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0c0c10"/>
+
+  <!-- Top border line -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#1e1e26" stroke-width="1"/>
+
+  <!-- Subtle bottom section line -->
+  <line x1="80" y1="545" x2="1120" y2="545" stroke="#1e1e26" stroke-width="1"/>
+
+  <!-- Eyebrow -->
+  <text x="80" y="230" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#5a5a68" letter-spacing="4">GROWTH MARKETING  ·  CREATIVE STRATEGY</text>
+
+  <!-- Name -->
+  <text x="80" y="320" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="76" font-weight="600" fill="#ffffff" letter-spacing="-2">Love Killander</text>
+
+  <!-- Tagline -->
+  <text x="80" y="378" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="300" fill="#72727e" letter-spacing="0">Performance. Creative. Commerce.</text>
+
+  <!-- URL bottom left -->
+  <text x="80" y="580" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#3a3a48" letter-spacing="3">LOVEKILLANDER.GITHUB.IO</text>
+
+  <!-- ✦ symbol bottom right -->
+  <text x="1120" y="580" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#2e2e38" text-anchor="end">✦</text>
+</svg>
