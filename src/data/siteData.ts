@@ -10,9 +10,9 @@ subheadline:
   ctaSecondary: "Get in touch",
 
   stats: [
-    { value: "12+", label: "Brands" },
+    { value: "24+", label: "Brands" },
     { value: "10", label: "Markets (EU/US)" },
-    { value: "8M", label: "SEK Managed spend" },
+    { value: "1M", label: "SEK Managed spend" },
     { value: "40+", label: "/ month Creative tests" },
   ],
 
