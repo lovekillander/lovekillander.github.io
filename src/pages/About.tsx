@@ -12,7 +12,7 @@ const About = () => {
       <main className="pt-14 md:pt-16">
         <section className="section-spacing">
           <div className="content-max">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
               {/* Text */}
               <div ref={refText} className="reveal-up">
@@ -48,7 +48,7 @@ const About = () => {
                   <img
                     src="/images/about.jpg"
                     alt="Love Killander"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    className="absolute inset-0 w-full h-full object-cover object-center grayscale"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                   />
                 </div>
