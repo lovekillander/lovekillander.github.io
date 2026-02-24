@@ -44,11 +44,11 @@ const About = () => {
 
               {/* Image */}
               <div ref={refImage} className="reveal-up">
-                <div className="relative aspect-[3/4] w-full max-w-sm border border-border overflow-hidden bg-secondary">
+                <div className="relative aspect-[3/2] w-full border border-border overflow-hidden bg-secondary">
                   <img
                     src="/images/about.jpg"
                     alt="Love Killander"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                   />
                 </div>
