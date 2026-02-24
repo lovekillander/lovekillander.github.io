@@ -18,7 +18,7 @@ const HowIWorkSection = () => {
                   </span>
                   <div className="max-w-lg">
                     <h3 className="heading-md mb-3">{block.title}</h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                       {block.description}
                     </p>
                   </div>

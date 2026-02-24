@@ -51,19 +51,19 @@ subheadline:
       number: "01",
       title: "Brand",
       description:
-        "We start with positioning and narrative. Then we build the comms system—PR angles, launch framing, and creative direction that keeps the brand sharp across every touchpoint.",
+        "I define positioning and narrative, then turn it into a comms system that holds under pressure.\n\nAngle map, launch framing, and creative direction that stays consistent across paid, PR, site, and content.\n\nThe goal is an ecosystem, not campaigns.\nEverything reinforcing the same story.",
     },
     {
       number: "02",
       title: "Performance",
       description:
-        "Measurement first. We set the loop: hypothesis → test → learn → iterate. Budget follows signal, not hype—optimized for contribution, LTV, and what scales sustainably.",
+        "Measurement first. I build the loop: hypothesis → test → learn → scale.\nBudget follows signal, not noise.\n\nI optimize for sustainability, not spikes.\nThat means performance tracked through GM1, GM2, and GM3, with decisions anchored in contribution margin, CAC payback, and what stays efficient at higher spend.",
     },
     {
       number: "03",
-      title: "Commerce",
+      title: "E-Commerce",
       description:
-        "We tighten the store and the offer: PDP → checkout → post-purchase. Then we build retention foundations (email/SMS) so growth doesn't reset every month.",
+        "I tighten the store and offer around one job: reduce friction and increase conviction.\nPDP → cart → checkout → post-purchase, measured end-to-end.\n\nThen I build retention foundations (email/SMS) so the brand becomes an ecosystem:\nrepeat purchase, higher LTV, and growth that compounds instead of resetting every month.",
     },
   ],
 
