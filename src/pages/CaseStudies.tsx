@@ -6,8 +6,16 @@ const hideOnError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   (e.target as HTMLImageElement).style.display = "none";
 };
 
-const CaseImage = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="relative aspect-[16/9] w-full border border-border overflow-hidden bg-secondary mt-12">
+const CaseImage = ({
+  src,
+  alt,
+  aspect = "aspect-[16/9]",
+}: {
+  src: string;
+  alt: string;
+  aspect?: string;
+}) => (
+  <div className={`relative ${aspect} w-full border border-border overflow-hidden bg-secondary mt-12`}>
     <img
       src={src}
       alt={alt}
@@ -48,7 +56,7 @@ const CaseStudies = () => {
         <section className="mt-12 mb-0">
           <div className="content-max">
             <div ref={refHero} className="reveal-up">
-              <CaseImage src="/images/uys-hero.jpg" alt="Under Your Skin — hero" />
+              <CaseImage src="/images/uys-hero.jpg" alt="Under Your Skin — hero" aspect="aspect-[16/7]" />
             </div>
           </div>
         </section>
