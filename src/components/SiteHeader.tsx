@@ -30,6 +30,18 @@ const SiteHeader = () => {
             </a>
           ))}
           <Link
+            to="/case-studies"
+            className={[
+              "px-3 py-1.5 text-xs font-medium transition-colors duration-200 rounded-full hover:bg-secondary",
+              pathname === "/case-studies"
+                ? "text-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            ].join(" ")}
+            onClick={() => trackEvent("case_studies")}
+          >
+            Case Studies
+          </Link>
+          <Link
             to="/about"
             className={[
               "px-3 py-1.5 text-xs font-medium transition-colors duration-200 rounded-full hover:bg-secondary",
