@@ -16,6 +16,7 @@ const ContactSection = () => {
       <div className="content-max">
         <div ref={ref} className="reveal-up max-w-lg">
           <h2 className="heading-lg mb-6 whitespace-pre-line">{siteData.contact.headline}</h2>
+          <p className="text-sm text-muted-foreground mb-8">{siteData.contact.subheadline}</p>
 
           <form
             className="space-y-4 mb-8"

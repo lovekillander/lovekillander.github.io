@@ -90,7 +90,8 @@ subheadline:
   ],
 
   contact: {
-    headline: "Built for momentum.\nDesigned to last",
+    headline: "For brands that want to scale\nwithout losing the feeling",
+    subheadline: "If that's you, message me. I'll map the next moves.",
     email: "love.killanderjobb@gmail.com",
     linkedin: "https://www.linkedin.com/in/love-killander-3143bb250",
   },
