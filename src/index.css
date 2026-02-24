@@ -109,11 +109,28 @@
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-up {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
     transition: none !important;
+  }
+
+  .animate-marquee {
+    animation-play-state: paused;
   }
 }
