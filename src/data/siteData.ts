@@ -95,6 +95,10 @@ subheadline:
     email: "love.killanderjobb@gmail.com",
     linkedin: "https://www.linkedin.com/in/love-killander-3143bb250",
   },
+  // Formspree form ID (the part after /f/ in your endpoint URL)
+  // Get it at formspree.io → create a free form → copy the ID
+  formspree: "",
+
   leadMagnet: {
   enabled: true,
   headline: "Enter your email for a Creative Audit",

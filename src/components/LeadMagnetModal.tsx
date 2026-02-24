@@ -46,10 +46,22 @@ export default function LeadMagnetModal() {
     setOpen(false);
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     trackEvent("get_it");
-    // TODO later: connect Mailchimp/ConvertKit/etc
+
+    if (siteData.formspree) {
+      try {
+        await fetch(`https://formspree.io/f/${siteData.formspree}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ email, _subject: "New Creative Audit request" }),
+        });
+      } catch {
+        // Silent fail — still close the modal
+      }
+    }
+
     setOpen(false);
   };
 
