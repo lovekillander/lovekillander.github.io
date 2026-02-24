@@ -19,29 +19,29 @@ subheadline:
   services: [
     {
       title: "Brand Communication",
-      description: "Brand clarity and communication that travels across channels.",
+      description: "Positioning and creative direction that stays sharp across every channel.",
       bullets: [
-        "Positioning, messaging, and narrative systems",
-        "PR/earned amplification + launch framing",
-        "Creative direction that protects brand equity",
+        "Positioning, message hierarchy, and narrative system",
+        "Launch framing + PR angles built for earned pickup",
+        "Creative direction that protects brand equity in paid and content",
       ],
     },
     {
       title: "Performance Marketing",
-      description: "Measurement-first growth that turns spend into contribution.",
+      description: "Measurement first. Optimized for contribution and GM1–GM3 sustainability.",
       bullets: [
-        "Funnel strategy + disciplined testing cadence",
-        "Platform-native account structure (Meta/Google/TikTok)",
-        "Reporting built for decisions, not dashboards",
+        "Full-funnel strategy + disciplined testing cadence",
+        "Platform-native account architecture (Meta / Google) built to scale",
+        "Reporting for decisions: GM1, GM2, GM3, CAC payback, LTV signals",
       ],
     },
     {
       title: "E-commerce",
-      description: "Store, offer, and retention systems that compound over time.",
+      description: "Store, offer, and retention systems that compound into an ecosystem.",
       bullets: [
-        "CRO from PDP to checkout (offers, flows, UX)",
-        "Shopify infrastructure + tracking hygiene",
-        "Email/SMS foundations that lift LTV",
+        "CRO from PDP → checkout with offer and flow optimization",
+        "Shopify + tracking hygiene (GA4 / GTM) to protect signal quality",
+        "Email/SMS foundations that lift LTV and reduce dependency on paid",
       ],
     },
   ],
