@@ -12,7 +12,7 @@ const About = () => {
       <main className="pt-14 md:pt-16">
         <section className="section-spacing">
           <div className="content-max">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
               {/* Text */}
               <div ref={refText} className="reveal-up">
@@ -43,7 +43,7 @@ const About = () => {
               </div>
 
               {/* Image */}
-              <div ref={refImage} className="reveal-up">
+              <div ref={refImage} className="reveal-up lg:mt-36">
                 <div className="relative aspect-[3/2] w-full border border-border overflow-hidden bg-secondary">
                   <img
                     src="/images/about.jpg"
