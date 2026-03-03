@@ -5,7 +5,6 @@ import { trackEvent } from "@/lib/analytics";
 const navItems = [
   { label: "Services", href: "#services", mobileHidden: true },
   { label: "Companies", href: "#companies" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const SiteHeader = () => {
@@ -29,6 +28,13 @@ const SiteHeader = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href={isHome ? "#contact" : "/#contact"}
+            className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full hover:bg-secondary"
+            onClick={() => trackEvent("contact")}
+          >
+            Contact
+          </a>
           <Link
             to="/case-studies"
             className={[
