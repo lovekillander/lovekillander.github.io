@@ -3,7 +3,7 @@ import { siteData } from "@/data/siteData";
 import { trackEvent } from "@/lib/analytics";
 
 const navItems = [
-  { label: "Services", href: "#services" },
+  { label: "Services", href: "#services", mobileHidden: true },
   { label: "Companies", href: "#companies" },
   { label: "Contact", href: "#contact" },
 ];
@@ -23,7 +23,7 @@ const SiteHeader = () => {
             <a
               key={item.href}
               href={isHome ? item.href : `/${item.href}`}
-              className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full hover:bg-secondary"
+              className={`px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full hover:bg-secondary${item.mobileHidden ? " hidden md:inline" : ""}`}
               onClick={() => trackEvent(item.label.toLowerCase())}
             >
               {item.label}
