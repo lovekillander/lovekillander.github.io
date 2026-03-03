@@ -14,7 +14,7 @@ const cases = [
     to: "/case-studies/room-48",
     number: "02",
     title: "Room 48",
-    subtitle: "Event + community som driver lojalitet och lönsamhet",
+    subtitle: "Event + community driving loyalty and profitability",
   },
 ];
 

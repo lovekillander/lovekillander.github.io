@@ -40,7 +40,7 @@ const CaseStudies = () => {
       <main className="pt-14 md:pt-16">
 
         {/* ── Page header ── */}
-        <section className="section-spacing pb-0">
+        <section className="pt-12 md:pt-16 pb-0">
           <div className="content-max">
             <div ref={refHeader} className="reveal-up">
               <p className="eyebrow mb-8">CASE STUDY</p>
@@ -53,7 +53,7 @@ const CaseStudies = () => {
         </section>
 
         {/* ── Hero image ── */}
-        <section className="mt-12 mb-0">
+        <section className="mt-10 mb-0">
           <div className="content-max">
             <div ref={refHero} className="reveal-up">
               <CaseImage src="/images/uys-hero.jpg" alt="Under Your Skin — hero" aspect="aspect-[16/7]" />
@@ -62,15 +62,15 @@ const CaseStudies = () => {
         </section>
 
         {/* ── 01 The Challenge ── */}
-        <section className="section-spacing">
+        <section className="py-10 md:py-14">
           <div className="content-max">
             <div ref={refS01} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">01</p>
                 <div>
-                  <h2 className="heading-lg mb-10">The Challenge</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">The Challenge</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
                       Under Your Skin had strong brand equity.
                     </p>
@@ -96,15 +96,15 @@ const CaseStudies = () => {
         </section>
 
         {/* ── 02 Cart Optimization ── */}
-        <section className="section-spacing pt-0">
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS02} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">02</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Cart Optimization</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Cart Optimization</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
                       The original cart introduced distraction before commitment.
                     </p>
@@ -139,15 +139,15 @@ const CaseStudies = () => {
         </section>
 
         {/* ── 03 Value Reinforcement ── */}
-        <section className="section-spacing pt-0">
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS03} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">03</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Value Reinforcement</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Value Reinforcement</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
                       Instead of pushing harder toward checkout, we introduced controlled
                       value reinforcement.
@@ -171,15 +171,15 @@ const CaseStudies = () => {
         </section>
 
         {/* ── 04 Payment Architecture ── */}
-        <section className="section-spacing pt-0">
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS04} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">04</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Payment Architecture</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Payment Architecture</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
                       The checkout required structural clarity.
                     </p>
@@ -209,15 +209,15 @@ const CaseStudies = () => {
         </section>
 
         {/* ── 05 Conclusion ── */}
-        <section className="section-spacing pt-0">
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS05} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">05</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Conclusion</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Conclusion</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
                       CRO is not about adding urgency banners.
                     </p>

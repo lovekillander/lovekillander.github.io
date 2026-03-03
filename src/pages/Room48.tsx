@@ -15,7 +15,7 @@ const CaseImage = ({
   alt: string;
   position?: string;
 }) => (
-  <div className="relative aspect-[16/7] w-full border border-border overflow-hidden bg-secondary mt-12">
+  <div className="relative aspect-[16/7] w-full border border-border overflow-hidden bg-secondary mt-10">
     <img
       src={src}
       alt={alt}
@@ -43,20 +43,20 @@ const Room48 = () => {
       <main className="pt-14 md:pt-16">
 
         {/* ── Page header ── */}
-        <section className="section-spacing pb-0">
+        <section className="pt-12 md:pt-16 pb-0">
           <div className="content-max">
             <div ref={refHeader} className="reveal-up">
               <p className="eyebrow mb-8">CASE STUDY</p>
               <h1 className="heading-xl mb-6">Room 48</h1>
               <p className="text-sm text-muted-foreground tracking-wide">
-                Event + community som driver lojalitet och lönsamhet
+                Event + community driving loyalty and profitability
               </p>
             </div>
           </div>
         </section>
 
         {/* ── Hero video (horizontal) ── */}
-        <section className="mt-12 mb-0">
+        <section className="mt-10 mb-0">
           <div className="content-max">
             <div ref={refHero} className="reveal-up">
               <div className="relative aspect-[16/9] w-full border border-border overflow-hidden bg-secondary">
@@ -73,33 +73,32 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 01 Bakgrund ── */}
-        <section className="section-spacing">
+        {/* ── 01 Background ── */}
+        <section className="py-10 md:py-14">
           <div className="content-max">
             <div ref={refS01} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">01</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Bakgrund</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Background</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Room 48 är ett event och communityformat för studenter och unga
-                      yrkesverksamma inom kommunikation, marknadsföring, PR och design.
+                      Room 48 is an event and community format for students and young
+                      professionals in communication, marketing, PR, and design.
                     </p>
                     <p>
-                      Projektet byggdes utifrån ett tydligt glapp mellan utbildning och bransch.
+                      The project was built around a clear gap between education and industry.
                     </p>
                     <p>
-                      Mycket teori och inspiration.<br />
-                      Men få sammanhang där man förstår hur beslut, processer och verkligt
-                      arbete faktiskt ser ut.
+                      Plenty of theory and inspiration.<br />
+                      But few contexts where you understand how decisions, processes,
+                      and real work actually look.
                     </p>
                     <p>
-                      Det glappet var utgångspunkten.
+                      That gap was the starting point.
                     </p>
                   </div>
-                  {/* Image placed here — community format introduced */}
                   <CaseImage
                     src="/images/room48-hero.jpg"
                     alt="Room 48 community"
@@ -111,32 +110,32 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 02 Utmaning ── */}
-        <section className="section-spacing pt-0">
+        {/* ── 02 Challenge ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS02} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">02</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Utmaning</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Challenge</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Utmaningen var att skapa ett format som känns kurerat och relevant
-                      för målgruppen, men samtidigt är affärsmässigt hållbart över tid.
+                      The challenge was to build a format that feels curated and relevant
+                      for the audience, while remaining commercially sustainable over time.
                     </p>
                     <p>
-                      Dubbla målgrupper med olika drivkrafter.
+                      Two audiences with different motivations.
                     </p>
                     <div className="space-y-2 pl-5 border-l border-border">
-                      <p>För studenter: värdet är relationer och riktning.</p>
+                      <p>For students: the value is relationships and direction.</p>
                       <p>
-                        För byråer: värdet är långsiktiga möten med framtida talang
-                        utan att det känns som traditionell marknadsföring.
+                        For agencies: the value is long-term access to future talent
+                        without feeling like traditional marketing.
                       </p>
                     </div>
                     <p>
-                      Formatet behövde tillgodose båda utan att kompromissa med någondera.
+                      The format had to serve both without compromising either.
                     </p>
                   </div>
                 </div>
@@ -146,28 +145,28 @@ const Room48 = () => {
         </section>
 
         {/* ── 03 Data & PMF ── */}
-        <section className="section-spacing pt-0">
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS03} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">03</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Data & PMF</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Data & PMF</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Product market fit säkrades genom en mix av kvalitativ och kvantitativ data
-                      innan formatet lanserades.
+                      Product market fit was validated through a mix of qualitative and
+                      quantitative data before the format launched.
                     </p>
                     <div className="space-y-2 pl-5 border-l border-border">
-                      <p>Enkäter till studenter.</p>
-                      <p>Enkäter till byråer.</p>
-                      <p>Råd och samtal med personer i branschen: Save Our Souls, Jung Relations, Seraya.</p>
-                      <p>Intervju med marknadschefen för Föreningen Ekonomerna vid Stockholms universitet.</p>
+                      <p>Surveys with students.</p>
+                      <p>Surveys with agencies.</p>
+                      <p>Conversations with industry professionals: Save Our Souls, Jung Relations, Seraya.</p>
+                      <p>Interview with the marketing director of Föreningen Ekonomerna at Stockholm University.</p>
                     </div>
                     <p>
-                      Datan bekräftade efterfrågan och gav underlag för formatets struktur,
-                      prissättning och kommunikation.
+                      The data confirmed demand and informed the format's structure,
+                      pricing, and communication.
                     </p>
                   </div>
                 </div>
@@ -176,29 +175,29 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 04 Vad vi byggde ── */}
-        <section className="section-spacing pt-0">
+        {/* ── 04 What We Built ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS04} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">04</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Vad vi byggde</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">What We Built</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Infrastrukturen byggdes för att hantera två separata köpflöden
-                      och en CRM logik som lever före och efter eventet.
+                      The infrastructure was built to handle two separate purchase flows
+                      and a CRM logic that operates before and after each event.
                     </p>
                     <div className="space-y-2 pl-5 border-l border-border">
-                      <p>Shopify som hub: landningssida och anmälningsflöde.</p>
-                      <p>Typeform flöden för segmentering och intent, student respektive företag.</p>
-                      <p>CRM logik med automatiserad uppföljning före och efter event.</p>
-                      <p>B2B sponsring där företag finansierar studentplatser via fakturering.</p>
+                      <p>Shopify as hub: landing page and registration flow.</p>
+                      <p>Typeform flows for segmentation and intent, student and company respectively.</p>
+                      <p>CRM logic with automated follow-up before and after each event.</p>
+                      <p>B2B sponsorship where companies fund student seats via invoicing.</p>
                     </div>
                     <p>
-                      Strukturen gör det möjligt att skala antalet event utan att
-                      skala den manuella insatsen proportionellt.
+                      The structure allows scaling the number of events without scaling
+                      manual effort proportionally.
                     </p>
                   </div>
                 </div>
@@ -207,54 +206,54 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 05 GM modell & lönsamhet ── */}
-        <section className="section-spacing pt-0">
+        {/* ── 05 GM Model & Profitability ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS05} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">05</p>
                 <div>
-                  <h2 className="heading-lg mb-10">GM modell & lönsamhet</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">GM Model & Profitability</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Ekonomin modellerades med GM1, GM2 och GM3 för att säkra lönsamhet
-                      per event och skapa en grund för skalbarhet.
+                      The economics were modeled with GM1, GM2, and GM3 to ensure
+                      profitability per event and create a foundation for scale.
                     </p>
                     <div className="space-y-4 pl-5 border-l border-border">
                       <div className="space-y-1">
                         <p className="text-foreground font-medium">GM1: Event contribution margin</p>
                         <p>
-                          Intäkter per event (sponsorpaket + övriga intäkter) minus direkta
-                          eventkostnader: lokal, tillstånd, mat och dryck, produktion.
+                          Revenue per event (sponsorship packages + other income) minus direct
+                          event costs: venue, permits, food and beverage, production.
                         </p>
                       </div>
                       <div className="space-y-1">
-                        <p className="text-foreground font-medium">GM2: Efter rörliga orderkostnader</p>
+                        <p className="text-foreground font-medium">GM2: After variable order costs</p>
                         <p>
-                          GM1 minus rörliga kostnader kopplade till leverans och hantering:
-                          transaktionskostnader, administration per order, support.
+                          GM1 minus variable costs tied to delivery and handling:
+                          transaction fees, per-order administration, support.
                         </p>
                       </div>
                       <div className="space-y-1">
-                        <p className="text-foreground font-medium">GM3: Efter förvärvskostnad</p>
+                        <p className="text-foreground font-medium">GM3: After acquisition cost</p>
                         <p>
-                          GM2 minus CAC/CPA för att fylla eventet och få in företag som
-                          sponsorer. Förbättras genom bättre B2B mix, återkommande relationer
-                          och lägre beroende av betald räckvidd.
+                          GM2 minus CAC/CPA for filling the event and acquiring company sponsors.
+                          Improves through better B2B mix, returning relationships,
+                          and lower dependency on paid reach.
                         </p>
                       </div>
                     </div>
                     <p>
-                      Vi byggde också en enkel kalkyl med definierade inputs och outputs.
+                      We also built a simple model with defined inputs and outputs.
                     </p>
                     <div className="space-y-2 pl-5 border-l border-border">
-                      <p>Input: antal platser, kostnad per person, fasta kostnader per event, sponsorpris.</p>
-                      <p>Output: break even, GM per event, GM3 krav och huruvida GM3 uppnås.</p>
+                      <p>Input: number of seats, cost per person, fixed costs per event, sponsorship price.</p>
+                      <p>Output: break even, GM per event, GM3 target, and whether GM3 is achieved.</p>
                     </div>
                     <p>
-                      Kalkylen används som beslutsunderlag inför varje event och
-                      gör det enkelt att testa olika mix av intäkter och kostnader.
+                      The model is used as a decision tool before each event, making it
+                      easy to test different revenue and cost combinations.
                     </p>
                   </div>
                 </div>
@@ -263,26 +262,26 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 06 KPIer & mätplan ── */}
-        <section className="section-spacing pt-0">
+        {/* ── 06 KPIs & Measurement ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS06} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">06</p>
                 <div>
-                  <h2 className="heading-lg mb-10">KPIer & mätplan</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">KPIs & Measurement</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      Mätplanen täcker hela kedjan från intresse till lönsamhet.
+                      The measurement plan covers the full chain from interest to profitability.
                     </p>
                     <div className="space-y-2 pl-5 border-l border-border">
                       <p>Interest to signup rate, student.</p>
-                      <p>Företagsintresse till möte till signerat sponsorpaket, lead to close.</p>
+                      <p>Company interest to meeting to signed sponsorship package, lead to close.</p>
                       <p>Show up rate.</p>
                       <p>Repeat attendance.</p>
-                      <p>NPS och CSAT efter event.</p>
-                      <p>GM per event: GM1, GM2 och GM3.</p>
+                      <p>NPS and CSAT post-event.</p>
+                      <p>GM per event: GM1, GM2, and GM3.</p>
                     </div>
                   </div>
                 </div>
@@ -291,29 +290,28 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── 07 Insikt ── */}
-        <section className="section-spacing pt-0">
+        {/* ── 07 Insight ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refS07} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1">07</p>
                 <div>
-                  <h2 className="heading-lg mb-10">Insikt</h2>
-                  <div className="space-y-6 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  <h2 className="heading-lg mb-6">Insight</h2>
+                  <div className="space-y-4 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                     <p>
-                      När lojalitet byggs före och efter transaktionen blir CRM
-                      ett upplevelsesystem, inte ett utskickssystem.
+                      When loyalty is built before and after the transaction, CRM becomes
+                      an experience system, not a broadcast system.
                     </p>
                     <p>
-                      I Room 48 är biljetten starten på en relation.
+                      In Room 48, the ticket is the start of a relationship.
                     </p>
                     <p>
-                      Community är mekanismen som gör att värdet lever mellan eventen
-                      och som reducerar beroendet av betald räckvidd för varje nytt tillfälle.
+                      Community is the mechanism that keeps value alive between events
+                      and reduces dependency on paid reach for each new occasion.
                     </p>
                   </div>
-                  {/* Image placed here — community as mechanism, closing insight */}
                   <CaseImage
                     src="/images/room48-event.jpg"
                     alt="Room 48 event"
@@ -325,22 +323,22 @@ const Room48 = () => {
           </div>
         </section>
 
-        {/* ── Extra: Roll & Verktyg ── */}
-        <section className="section-spacing pt-0">
+        {/* ── Extra: Role & Tools ── */}
+        <section className="pb-10 md:pb-14">
           <div className="content-max">
             <div ref={refExtra} className="reveal-up">
-              <div className="divider mb-12" />
+              <div className="divider mb-8" />
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                 <p className="eyebrow pt-1"></p>
                 <div className="space-y-3 text-sm text-muted-foreground max-w-2xl">
                   <p>
-                    <span className="text-foreground">Roll:</span>{" "}
-                    Growth, CX/CRM och affärsmodellering.
+                    <span className="text-foreground">Role:</span>{" "}
+                    Growth, CX/CRM, and business modeling.
                   </p>
                   <p>
-                    <span className="text-foreground">Verktyg:</span>{" "}
-                    Shopify, Typeform, epostautomation, CRM, analytics och spårning,
-                    kalkylmodell för GM1/GM2/GM3.
+                    <span className="text-foreground">Tools:</span>{" "}
+                    Shopify, Typeform, email automation, CRM, analytics and tracking,
+                    GM1/GM2/GM3 financial model.
                   </p>
                 </div>
               </div>
